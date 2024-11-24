@@ -1,0 +1,7 @@
+.mainBody img {
+  margin-top: 0.5rem;
+  opacity: 50%;
+  height: calc(100vh - 6.6rem);
+  width: 100%;
+  background-size: cover;
+}
