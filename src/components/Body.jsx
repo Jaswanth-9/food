@@ -28,8 +28,6 @@ export default function Body() {
   if (load) return <div>loading...</div>;
 
   return (
-    <mainBody className="mainBody">
-      <Foodcard data = {data} />
-    </mainBody>
+    <Foodcard data = {data} />
   );
 }
