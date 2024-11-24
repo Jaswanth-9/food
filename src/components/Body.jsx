@@ -29,8 +29,7 @@ export default function Body() {
 
   return (
     <mainBody className="mainBody">
-      <img src="/images/food.jpg" alt="background" />
-      <Foodcard />
+      <Foodcard data = {data} />
     </mainBody>
   );
 }

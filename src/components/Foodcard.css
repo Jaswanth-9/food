@@ -1,0 +1,5 @@
+.foodContainer{
+    height: calc(100vh - 6.6rem);
+    background-image: url("/public/images/food.jpg");
+    background-size: cover;
+}
