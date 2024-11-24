@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Body.css";
 import Foodcard from "./Foodcard";
 
-const BASE_URL = "http://localhost:9000/";
+export const BASE_URL = "http://localhost:9000";
 
 export default function Body() {
   const [data, setdata] = useState(null);
