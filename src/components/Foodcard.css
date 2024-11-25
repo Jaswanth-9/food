@@ -1,6 +1,6 @@
 .foodContainer {
     display: flex;
-  height: calc(100vh - 6.6rem);
+  min-height: calc(100vh - 6.6rem);
   background-image: url("/public/images/food.jpg");
   background-size: cover;
   margin-top: 0.5rem;
