@@ -28,21 +28,6 @@ export default function Body() {
     fetchfood();
   }, []);
 
-  const filterFood = (type) => {
-    if(type === "all"){
-      setfilteredData(data);
-      setselectedBtn("all");
-      return;
-
-    }
-
-    const filter = data?.filter((food) => 
-      food.type.toLowerCase().includes(type.toLowerCase())
-    );
-    setfilteredData(filter);
-    setselectedBtn(type);
-  }
-
   const searchFood = (e) => {
     const searchValue = e.target.value;
     if(searchValue === ""){
@@ -55,6 +40,20 @@ export default function Body() {
 
     setfilteredData(filter);
   };
+
+  const filterFood = (type) => {
+    if(type === "all"){
+      setfilteredData(data);
+      setselectedBtn("all");
+      return;
+    }
+    
+    const filter = data?.filter((food) => 
+      food.type.toLowerCase().includes(type.toLowerCase())
+    );
+    setfilteredData(filter);
+    setselectedBtn(type);
+  }
 
   if (error) return <div>{error}</div>;
   if (load) return <div>loading...</div>;
