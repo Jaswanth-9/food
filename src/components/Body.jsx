@@ -10,7 +10,7 @@ export default function Body() {
   const [data, setdata] = useState(null);
   const [load, setload] = useState(false);
   const [error, seterror] = useState(null);
-  const [selectedBtn, setselectedBtn] = useState("all");
+  // const [selectedBtn, setselectedBtn] = useState("all");
 
   useEffect(() => {
     const fetchfood = async () => {
@@ -30,9 +30,9 @@ export default function Body() {
 
   const searchFood = (e) => {
     const searchValue = e.target.value;
-    if(searchValue === ""){
-      setfilteredData(null);
-    }
+    // if(searchValue === ""){
+    //   setfilteredData(null);
+    // }
 
     const filter = data?.filter((food) => 
       food.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -44,7 +44,7 @@ export default function Body() {
   const filterFood = (type) => {
     if(type === "all"){
       setfilteredData(data);
-      setselectedBtn("all");
+      // setselectedBtn("all");
       return;
     }
     
@@ -52,7 +52,7 @@ export default function Body() {
       food.type.toLowerCase().includes(type.toLowerCase())
     );
     setfilteredData(filter);
-    setselectedBtn(type);
+    // setselectedBtn(type);
   }
 
   if (error) return <div>{error}</div>;
